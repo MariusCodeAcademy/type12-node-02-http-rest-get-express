@@ -4,7 +4,8 @@
   "description": "Express first steps",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "http": "node src/http.js"
   },
   "keywords": [
     "express",
