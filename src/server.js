@@ -3,9 +3,13 @@ console.log('server.js');
 
 // importuojam express
 const express = require('express');
+const cors = require('cors');
 // sukuriam back end aplikacija/serveri
 const app = express();
 const PORT = 3000;
+
+// Middleware
+app.use(cors());
 
 // Routes
 
