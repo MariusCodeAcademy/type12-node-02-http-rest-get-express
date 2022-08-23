@@ -4,6 +4,7 @@ console.log('server.js');
 // importuojam express
 const express = require('express');
 const cors = require('cors');
+const { fakeName } = require('./modules/cas');
 // sukuriam back end aplikacija/serveri
 const app = express();
 const PORT = 3000;
@@ -28,6 +29,7 @@ app.get('/about', (request, response) => {
 });
 
 // GET /api/users
+//const users =  iskelti i data.js
 const users = [
   {
     id: 1,
@@ -50,6 +52,14 @@ app.get('/api/users/1', (request, response) => {
 app.get('/api/users/2', (request, response) => {
   response.json(users[1]);
 });
+
+// GET /api/fake-user - grazinti random sugeneruota user su casual
+app.get('/api/fake-user', (request, response) => {
+  response.json({ user: fakeName() });
+});
+
+// GET /api/colors - grazina masyva su keturiom spalvom is casual
+// Fronte parisiusti spalvas ir sukurti 4 dezutes 100 x 100 px su tu spalvu fonu
 
 // 404 page
 app.use((req, res, next) => {
