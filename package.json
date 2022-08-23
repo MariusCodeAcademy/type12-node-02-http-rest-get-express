@@ -1,0 +1,15 @@
+{
+  "name": "02-http-rest-get-express",
+  "version": "1.0.0",
+  "description": "Express first steps",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "node"
+  ],
+  "author": "Marius K. <Marius@gmail.com>",
+  "license": "MIT"
+}
