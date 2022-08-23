@@ -4,13 +4,16 @@
   "description": "Express first steps",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "http": "node src/http.js"
+    "start": "nodemon src/server.js",
+    "http": "nodemon src/http.js"
   },
   "keywords": [
     "express",
     "node"
   ],
   "author": "Marius K. <Marius@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  }
 }

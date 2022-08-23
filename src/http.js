@@ -5,20 +5,20 @@ const server = http.createServer((request, response) => {
   const url = request.url;
 
   // make it switch
+  switch (url) {
+    case '/':
+      response.writeHead(200, { 'content-type': 'text/html' });
+      response.write('<h1>Welcome home page</h1>');
+      break;
+    case '/about':
+      response.write('<h1>About us page</h1>');
+      break;
 
-  if (url === '/') {
-    response.write('<h1>Welcome home page</h1>');
-    // baigiam atsaka
-    response.end();
-  } else if (url === '/about') {
-    response.write('<h1>About us page</h1>');
-    // baigiam atsaka
-    response.end();
-  } else {
-    response.write('<h1>page not found</h1>');
-    // baigiam atsaka
-    response.end();
+    default:
+      response.writeHead(404, { 'content-type': 'text/html' });
+      response.write('<h1>page not found!!!</h1>');
   }
+  response.end();
 });
 
 server.listen(3000);
