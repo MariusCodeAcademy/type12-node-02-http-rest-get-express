@@ -37,6 +37,16 @@ const users = [
   },
 ];
 
+app.get('/api/users', (request, response) => {
+  response.json(users);
+});
+app.get('/api/users/1', (request, response) => {
+  response.json(users[0]);
+});
+app.get('/api/users/2', (request, response) => {
+  response.json(users[1]);
+});
+
 // 404 page
 app.use((req, res, next) => {
   res.status(404).json({ msg: "Sorry can't find that!" });
